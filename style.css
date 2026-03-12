@@ -4,11 +4,13 @@
     --border-glass: rgba(255, 255, 255, 0.08);
     --text-main: #FFFFFF;
     --text-muted: #8E9BAE;
-    --accent: #B084CC; /* 高雅紫 */
+    --accent: #B084CC;
+    /* 高雅紫 */
     --accent-glow: rgba(176, 132, 204, 0.6);
-    --gold: #D4AF37;   /* 命理金 */
+    --gold: #D4AF37;
+    /* 命理金 */
     --gold-glow: rgba(212, 175, 55, 0.5);
-    
+
     --font-heading: 'Noto Serif SC', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -53,7 +55,7 @@ body {
 .sphere-1 {
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(100,50,150,0.4) 0%, rgba(10,10,30,0) 70%);
+    background: radial-gradient(circle, rgba(100, 50, 150, 0.4) 0%, rgba(10, 10, 30, 0) 70%);
     top: -10%;
     left: -10%;
     animation-delay: 0s;
@@ -62,7 +64,7 @@ body {
 .sphere-2 {
     width: 50vw;
     height: 50vw;
-    background: radial-gradient(circle, rgba(40,80,180,0.3) 0%, rgba(10,10,30,0) 70%);
+    background: radial-gradient(circle, rgba(40, 80, 180, 0.3) 0%, rgba(10, 10, 30, 0) 70%);
     bottom: -10%;
     right: -10%;
     animation-delay: -5s;
@@ -71,16 +73,24 @@ body {
 .sphere-3 {
     width: 40vw;
     height: 40vw;
-    background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(10,10,30,0) 70%);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(10, 10, 30, 0) 70%);
     top: 40%;
     left: 30%;
     animation-delay: -10s;
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(5%, 10%) scale(1.1); }
-    100% { transform: translate(-5%, -5%) scale(0.95); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(5%, 10%) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-5%, -5%) scale(0.95);
+    }
 }
 
 .container {
@@ -131,7 +141,7 @@ header {
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
     min-height: 450px;
@@ -214,7 +224,7 @@ select option {
     transition: all 0.3s ease;
 }
 
-.radio-container input:checked ~ .checkmark {
+.radio-container input:checked~.checkmark {
     background: var(--accent);
     color: #fff;
     border-color: var(--accent);
@@ -273,8 +283,13 @@ button.glow-button:active {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #loading-section p {
@@ -285,8 +300,15 @@ button.glow-button:active {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 /* 结果展示区 */
@@ -318,7 +340,7 @@ button.glow-button:active {
     font-size: 1rem;
     letter-spacing: 0.2em;
     color: #e0e0e0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     padding: 0.5rem;
     border-radius: 6px;
     display: inline-block;
@@ -345,7 +367,7 @@ button.glow-button:active {
 
 .destiny-card.highlight {
     border-left-color: var(--gold);
-    background: linear-gradient(90deg, rgba(212,175,55,0.08) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.08) 0%, transparent 100%);
 }
 
 .destiny-card h3 {
@@ -402,6 +424,13 @@ footer {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
