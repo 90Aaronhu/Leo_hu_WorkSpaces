@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星境 · 八字命理排盘</title>
+    <!-- 引入高级中文字体和英文字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+SC:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="title">星境 <span>· 天机</span></h1>
+            <p class="subtitle">洞察命理，预见未来之光</p>
+        </header>
+
+        <main class="glass-card">
+            <div id="input-section" class="active-section">
+                <form id="destiny-form">
+                    <div class="input-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="请输入您的尊姓大名" required autocomplete="off">
+                    </div>
+
+                    <div class="input-group">
+                        <label>性别</label>
+                        <div class="radio-group">
+                            <label class="radio-container">
+                                <input type="radio" name="gender" value="male" checked>
+                                <span class="checkmark">乾 (男)</span>
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="gender" value="female">
+                                <span class="checkmark">坤 (女)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>公历生日</label>
+                        <div class="select-group">
+                            <select id="birth-year" required>
+                                <option value="" disabled selected>年</option>
+                            </select>
+                            <select id="birth-month" required>
+                                <option value="" disabled selected>月</option>
+                            </select>
+                            <select id="birth-day" required>
+                                <option value="" disabled selected>日</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="birth-time">出生时辰</label>
+                        <div class="select-group">
+                            <select id="birth-time" required>
+                                <option value="" disabled selected>请选择时辰</option>
+                                <option value="23">子时 (23:00-00:59)</option>
+                                <option value="1">丑时 (01:00-02:59)</option>
+                                <option value="3">寅时 (03:00-04:59)</option>
+                                <option value="5">卯时 (05:00-06:59)</option>
+                                <option value="7">辰时 (07:00-08:59)</option>
+                                <option value="9">巳时 (09:00-10:59)</option>
+                                <option value="11">午时 (11:00-12:59)</option>
+                                <option value="13">未时 (13:00-14:59)</option>
+                                <option value="15">申时 (15:00-16:59)</option>
+                                <option value="17">酉时 (17:00-18:59)</option>
+                                <option value="19">戌时 (19:00-20:59)</option>
+                                <option value="21">亥时 (21:00-22:59)</option>
+                                <option value="unknown">未知时辰</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="glow-button">
+                        <span>启示命盘</span>
+                        <div class="glow-effect"></div>
+                    </button>
+                </form>
+            </div>
+
+            <div id="loading-section" class="hidden-section">
+                <div class="spinner"></div>
+                <p>星轨计算中，正为您勘测天地运势...</p>
+            </div>
+
+            <div id="result-section" class="hidden-section">
+                <div class="result-header">
+                    <h2 id="result-greeting">尊敬的命主</h2>
+                    <p class="bazi-info" id="bazi-display">命盘排布：-- -- -- --</p>
+                </div>
+
+                <div class="cards-container">
+                    <div class="destiny-card highlight">
+                        <h3><i class="icon-destiny"></i> 流年运势</h3>
+                        <p id="desc-overall">运势读取中...</p>
+                    </div>
+
+                    <div class="destiny-card">
+                        <h3><i class="icon-love"></i> 桃花姻缘</h3>
+                        <p id="desc-love">情缘读取中...</p>
+                    </div>
+
+                    <div class="destiny-card">
+                        <h3><i class="icon-wealth"></i> 事业财帛</h3>
+                        <p id="desc-wealth">财富读取中...</p>
+                    </div>
+                </div>
+
+                <button id="reset-btn" class="outline-button">再次测算</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>仅供娱乐探索，命运掌握在自己手中</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
